@@ -1,3 +1,236 @@
+@import "../../node_modules/normalize.css/normalize.css";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .hero {
+    padding: 15px;
+    font-weight: 700;
     background: linear-gradient(#00859B, #82A856);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 315px;
+    height: 105px;
+    margin: 0 auto;
+    background: url('/src/images/cloud.webp') center/contain no-repeat;
+
+    &__image {
+        width: 285px;
+        height: 90px;
+        background: url('/src/images/logo.webp') center/contain no-repeat;
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    max-width: 210px;
+    margin: 20px auto 40px;
+    padding: 35px 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: url('/src/images/cloud.webp') center/contain no-repeat;
+
+    &__link {
+        color: #715d00;
+    }
+}
+
+.title {
+    margin: 0 auto 20px;
+    color: #f9e994;
+    text-align: center;
+    font-size: 30px;
+}
+
+.description {
+    &__text {
+        color: #f6f7e4;
+        margin-bottom: 30px;
+    }
+}
+
+.advantages {
+    margin-bottom: 30px;
+    padding: 35px;
+    border-radius: 20px;
+    background: #7fb3e1;
+    color: #dfe4de;
+
+    &__item {
+        position: relative;
+        display: flex;
+        padding-left: 35px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 24px;
+            content: "";
+            background: url('/src/images/footprint.webp') center/contain no-repeat;
+        }
+    }
+}
+
+.cats-image {
+    width: 100%;
+    max-width: 320px;
+    height: 190px;
+    margin: 0 auto 30px;
+    background: url('/src/images/cats.webp') center/contain no-repeat;
+}
+
+.order {
+    overflow: hidden;
+    width: 270px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #fdfcfc;
+    text-align: center;
+    border-radius: 20px 20px 10px 10px;
+
+    &__header {
+        position: relative;
+        margin-bottom: 40px;
+        padding: 25px 10px;
+        background: #7eb2e1;
+
+        &-title {
+            color: #483c08;
+            font-size: 33px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin: 0 0 8px;
+        }
+
+        &-timer {
+            margin-bottom: 5px;
+            font-size: 36px;
+            color: #f6e791;
+        }
+
+        &-chevron {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            text-align: center;
+            height: 20px;
+            width: 100%;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 50%;
+                height: 100%;
+                background: #7eb2e1;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            &::before {
+                left: 0;
+                transform: skew(0deg, 6deg);
+            }
+
+            &::after {
+                right: 0;
+                transform: skew(0deg, -6deg);
+                box-shadow: -5px -1px 0 #7eb2e1, 0 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+}
+
+.order-price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__old {
+        position: relative;
+        font-size: 30px;
+        color: #6b6b6b;
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #f6be91;
+            transform: rotate(162deg);
+        }
+    }
+
+    &__new {
+        font-size: 36px;
+        color: #483c08;
+    }
+}
+
+.order-form {
+    width: 220px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    &__label {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 15px;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            width: 24px;
+            height: 24px;
+            content: "";
+            transform: translateY(-50%);
+            background: url('/src/images/footprint-shadow.webp') center/contain no-repeat;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 50px;
+        padding: 0 0 0 45px;
+        border-radius: 30px;
+        background-color:#f3efef;
+        border: 0;   
+        font-size: 16px;
+    }
+
+    &__button {
+        width: 100%;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 30px;
+        background-color: #a1d337;
+        border: 0;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &__date {
+        font-size: 18px;
+        color: #444;
+    }
 }
