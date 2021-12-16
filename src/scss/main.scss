@@ -333,16 +333,19 @@ body {
 }
 
 .product {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 15px;
-    background: url("/src/images/footprint-bg.webp");
-    text-align: center;
+    background: url("/src/images/footprint-bg.webp") center/contain no-repeat;
+    
+    &__wrapper {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 15px;
+        text-align: center;
+    }
 
     &__title {
         font-weight: 700;
         font-size: 52px;
-        background: linear-gradient(180deg, #F9E994 0%, #537D13 80%);
+        background: linear-gradient(180deg, #f9e994 0%, #537d13 80%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
