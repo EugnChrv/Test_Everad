@@ -1,5 +1,13 @@
 @import "../../node_modules/normalize.css/normalize.css";
 
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -8,6 +16,20 @@ body {
     padding: 15px;
     font-weight: 700;
     background: linear-gradient(#00859B, #82A856);
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+    @media only screen and (min-width: 769px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
 }
 
 .logo {
@@ -25,17 +47,33 @@ body {
         height: 90px;
         background: url('/src/images/logo.webp') center/contain no-repeat;
     }
+
+    @media only screen and (min-width: 769px) {
+        margin: 0;
+    }
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    max-width: 210px;
     margin: 20px auto 40px;
     padding: 35px 40px;
     font-size: 14px;
     text-transform: uppercase;
-    background: url('/src/images/cloud.webp') center/contain no-repeat;
+    background: url('/src/images/cloud.webp') center/100% 100% no-repeat;
+
+    @media only screen and (min-width: 769px) {
+        width: 100%;
+        max-width: 425px;
+        margin: 0;
+        padding: 35px 65px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 300px;
+        margin: 0 auto;
+    }
 
     &__link {
         color: #715d00;
@@ -47,9 +85,29 @@ body {
     color: #f9e994;
     text-align: center;
     font-size: 30px;
+    line-height: 1.2;
+
+    @media only screen and (min-width: 769px) {
+        max-width: 580px;
+        font-size: 52px;
+        margin-bottom: 10px;
+    }
+}
+
+.content {
+    @media only screen and (min-width: 769px) {
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-end;
+    }
 }
 
 .description {
+    @media only screen and (min-width: 769px) {
+       max-width: 430px;
+       font-size: 26px;
+    }
+
     &__text {
         color: #f6f7e4;
         margin-bottom: 30px;
@@ -62,6 +120,12 @@ body {
     border-radius: 20px;
     background: #7fb3e1;
     color: #dfe4de;
+
+    @media only screen and (min-width: 769px) {
+        max-width: 325px;
+        margin: 0;
+        font-size: 22px;
+    }
 
     &__item {
         position: relative;
@@ -91,6 +155,13 @@ body {
     height: 190px;
     margin: 0 auto 30px;
     background: url('/src/images/cats.webp') center/contain no-repeat;
+
+    @media only screen and (min-width: 769px) {
+        max-width: auto;
+        margin: 0;
+        flex-basis: 50%;
+        transform: translate(-55px, -100px) scale(2.1);
+    }
 }
 
 .order {
@@ -101,6 +172,11 @@ body {
     background-color: #fdfcfc;
     text-align: center;
     border-radius: 20px 20px 10px 10px;
+
+    @media only screen and (min-width: 769px) {
+        flex-shrink: 0;
+        margin: 0;
+    }
 
     &__header {
         position: relative;
