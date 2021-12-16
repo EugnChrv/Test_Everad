@@ -63,7 +63,7 @@
                         </p>
 
                         <div class="order__header-timer">
-                            2:00:00
+                            <span id="hours">2</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
                         </div>
 
                         <div class="order__header-price order-price">
@@ -84,6 +84,7 @@
 
                         <label class="order-form__label">
                             <input
+                                id="tel"
                                 type="text"
                                 class="order-form__input"
                                 placeholder="+38(0__)___-__-__"
@@ -94,7 +95,7 @@
                             order
                         </button>
                     </form>
-                    <div class="order__date">Order date: <span>17.11.2021</span></div>
+                    <div class="order__date">Order date: <span id="date"></span></div>
                 </div>
             </div>
 
