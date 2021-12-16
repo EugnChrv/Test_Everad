@@ -1,10 +1,19 @@
 import '../scss/main.scss'
 
+import IMask from 'imask';
+
+const element = document.getElementById('tel');
+const maskOptions = {
+  mask: '+38(000)000-00-00'
+};
+
+ const mask = IMask(element, maskOptions);
+
 
 function startTimerCountdown () {
-    const hours = document.querySelector('#hours');
-    const minutes = document.querySelector('#minutes');
-    const seconds = document.querySelector('#seconds');
+    const hours = document.getElementById('hours');
+    const minutes = document.getElementById('minutes');
+    const seconds = document.getElementById('seconds');
 
 
     let valueH = hours ? +hours.innerText : 0;
@@ -39,7 +48,7 @@ function startTimerCountdown () {
 function setCurrentDate() {
     const rightNow = new Date();
     const date = rightNow.toISOString().slice(0,10).replace(/-/g,".");
-    const dateContainer = document.querySelector('#date');
+    const dateContainer = document.getElementById('date');
 
     if(!dateContainer) { return; }
 
