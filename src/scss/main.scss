@@ -15,10 +15,13 @@ body {
 .hero {
     padding: 15px;
     font-weight: 700;
-    background: linear-gradient(#00859B, #82A856);
+    background-image: linear-gradient(#00859B, #82A856);
 
     @media only screen and (min-width: 769px) {
+        position: relative;
         background-image: url('/src/images/hero-bg.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
         padding-bottom: 100px;
 
         &::before {
@@ -325,5 +328,94 @@ body {
     &__date {
         font-size: 18px;
         color: #444;
+    }
+}
+
+.product {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px;
+    background: url("/src/images/fotprintBG\ 5.webp");
+    text-align: center;
+
+    &__title {
+        font-weight: 700;
+        font-size: 52px;
+        background: linear-gradient(180deg, #F9E994 0%, #537D13 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__cards {
+        @media only screen and (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-calm {
+            width: 100%;
+            padding: 25px 15px 15px;
+            background-color: #f6e791;
+            border-radius: 20px;
+            margin-bottom: 20px;
+    
+            @media only screen and (min-width: 769px) {
+                max-width: 305px;
+                
+                &:not(:first-child) {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &-card {
+            background-color: rgba(161, 211, 55, 0.4);
+            border-radius: 20px;
+            padding: 15px;
+    
+            @media only screen and (min-width: 769px) {
+                max-width: 275px;
+                min-height: 210px;
+            }
+
+            &__title {
+                margin: 0 0 20px;
+                font-weight: 700;
+                font-size: 22px;
+                color: #fff;
+                line-height: 1.2;
+            }
+
+            &__about {
+                margin: 0;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.2;
+                color: #483C08;
+            }
+        }
+
+        &-logo {
+            width: 100%;
+            height: 212px;
+            margin-bottom: 15px;
+            background: {
+                repeat: no-repeat;
+                position: center;
+                size: contain;
+            }
+
+            &--cat {
+                background-image: url("/src/images/cat-sleeping.webp");
+            }
+
+            &--lotos {
+                background-image: url("/src/images/lotos.webp");
+            }
+
+            &--fish {
+                background-image: url("/src/images/fish.webp");
+            }
+        }
     }
 }
