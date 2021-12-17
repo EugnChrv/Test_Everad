@@ -457,25 +457,7 @@ body {
             font-weight: 400;
         }
 
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            height: 20px;
-            background-color: #d4df6d;
-        }
-
-        &::before {
-            right: 0;
-            top: 0;
-            bottom: 50%;
-        }
-
-        &::after {
-            right: 0;
-            top: 50%;
-            bottom: 0;
-        }
+        
     }
 
     &__image {
